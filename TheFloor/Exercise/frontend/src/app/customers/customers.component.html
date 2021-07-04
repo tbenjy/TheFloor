@@ -1,0 +1,17 @@
+<div dir="rtl">
+  <h1>רשימת לקוחות</h1>
+  <table id="customersTbl" mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+    <ng-container matColumnDef="_id">
+      <td mat-cell *matCellDef="let customer" hidden> {{customer._id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fullName">
+      <td mat-cell *matCellDef="let customer">
+        <a [routerLink]="['/customers-details', customer._id]" routerLinkActive="active">{{customer.lastName}} {{customer.firstName}}</a>
+      </td>
+    </ng-container>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  <br />
+  <button id="newCustomerBtn" class="btn btn-primary" (click)="CreateCustomer()">הוסף לקוח</button>
+</div>

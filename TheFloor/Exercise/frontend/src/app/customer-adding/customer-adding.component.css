@@ -1,0 +1,25 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+mat-label::before
+{
+  content:"* ";
+  color: red;
+}
+
+#okDiv, #cancelDiv {
+  text-align: center;
+}
